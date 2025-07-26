@@ -111,7 +111,7 @@ function Home() {
           placeholder="Add a new todo"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
-          onKeyPress={(e) => e.key === "Enter" && todoCreate()}
+          onKeyDown={(e) => e.key === "Enter" && todoCreate()}
           className="flex-grow p-2 border rounded-l-md focus:outline-none"
         />
         <button
@@ -123,7 +123,7 @@ function Home() {
       </div>
       {loading ? (
         <div className="text-center justify-center">
-          <span className="textgray-500">Loading...</span>
+          <span className="text-gray-500">Loading...</span>
         </div>
       ) : error ? (
         <div className="text-center text-red-600 font-semibold">{error}</div>
