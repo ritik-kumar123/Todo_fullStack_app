@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={token ? <Home /> : <Navigate to="/login" />} />
         <Route path="/login" element={<Login setToken={setToken} />} />
-        <Route path="/signup" element={<Signup setToken={setToken} />} />
+        <Route path="/signup" element={<Signup/>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Toaster />
